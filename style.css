@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 20px;
+  }
+  
+  .brand, .model, .year {
+    margin: 5px 0;
+  }
+  
+  .brand button, .model button, .year button {
+    padding: 10px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .brand button:hover, .model button:hover, .year button:hover {
+    background: #0056b3;
+  }
+  
+  .model, .year, .images {
+    margin-left: 20px;
+    display: none;
+  }
+  
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .images img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
