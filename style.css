@@ -1,44 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f0f0f0;
+    font-family: sans-serif;
     margin: 20px;
-  }
-  
-  .brand, .model, .year {
-    margin: 5px 0;
-  }
-  
-  .brand button, .model button, .year button {
-    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 15px; /* Spacing between the blocks */
+}
+
+.brands-block, .models-block, .years-block, .photos-block {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Distribute available space equally */
+}
+
+.photos-block {
+    flex: 2; /* Make the photos block twice as wide */
+    display: flex; /* Enable flexbox for photo layout */
+    justify-content: center; /* Center photos horizontally */
+    align-items: center; /* Center photos vertically */
+    overflow: hidden; /* Important: Hide parts of the image that overflow */
+}
+
+#models-block, #years-block {
+    display: none; /* Initially hide these blocks */
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    padding: 8px 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     border: none;
-    background: #007BFF;
+    border-radius: 5px;
+    background-color: #007bff;
     color: white;
     cursor: pointer;
-    width: 100%;
-    text-align: left;
-    border-radius: 5px;
-    margin-top: 5px;
-  }
-  
-  .brand button:hover, .model button:hover, .year button:hover {
-    background: #0056b3;
-  }
-  
-  .model, .year, .images {
-    margin-left: 20px;
-    display: none;
-  }
-  
-  .images {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#photo-container {
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .images img {
-    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo-container img {
+    max-width: 95%; /* Slightly increase to ensure it fits within padding */
+    max-height: 95%; /* Slightly increase to ensure it fits within padding */
+    width: auto;
     height: auto;
+    object-fit: contain; /* Ensures the entire image fits within the container */
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
